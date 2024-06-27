@@ -1,0 +1,25 @@
+//General Styling variables
+$backgroundColor: #ffffff;
+$primaryColor: #171717;
+$secondaryColor: #ff00ff;
+
+$backgroundColorDark: #171717;
+$primaryColorDark: #ffffff;
+$secondaryColorDark: #121212;
+
+// NumberTag styling variables
+
+$numbersHeight: 362px;
+$numbersWidth: 195px;
+
+$numberBackground: #E6E6E6;
+$numberOn: #171717; //also used for dots
+
+$dotLength: 34px;
+
+// Define breakpoints
+$breakpoint-sm: 0px;
+$breakpoint-md: 520px;
+$breakpoint-l: 768px;
+$breakpoint-xl: 1024px;
+$breakpoint-xxl: 1800px;

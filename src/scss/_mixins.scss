@@ -1,0 +1,40 @@
+@import 'variables';
+
+@mixin backdrop-blur($radius) {
+  backdrop-filter: blur($radius);
+  -webkit-backdrop-filter: blur($radius); // Safari support
+}
+
+@mixin responsive($property, $xxl, $xl, $lg, $md, $sm) {
+  #{$property}: $sm;
+
+  @media (min-width: $breakpoint-sm) {
+    #{$property}: $sm;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    #{$property}: $md;
+  }
+
+  @media (min-width: $breakpoint-l) {
+    #{$property}: $lg;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    #{$property}: $xl;
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    #{$property}: $xxl;
+  }
+}
+
+@mixin mobile-only($property, $sm, $else) {
+  @media (min-width: $breakpoint-sm) {
+    #{$property}: $sm;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    #{$property}: $else;
+  }
+}

@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+
+.js-timer-seperator {
+    @include responsive(gap, 35px, 30px, 25px, 18px, 18px);
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    transition-duration: 0.2s;
+}
+
+.js-timer-dot {
+    @include responsive(height, 40px, $dotLength, 18px, 12px, 13px);
+    @include responsive(width, 40px, $dotLength, 18px, 12px, 13px);
+
+    padding: 0;
+
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+
+    transition-duration: 0.2s;
+
+}

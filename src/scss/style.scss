@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'modal';
+@import 'number';
+@import 'seperator';
+
+body {
+  background-color: white;
+}

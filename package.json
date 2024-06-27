@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "watch": "node-sass -w src/scss/style.scss build/style.css",
+    "build": "node-sass src/scss/style.scss build/style.css"
+  },
+
+  "name": "jstimer",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Paul",
+  "license": "ISC",
+  "description": "",
+
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

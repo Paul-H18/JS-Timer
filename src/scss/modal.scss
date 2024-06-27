@@ -1,0 +1,93 @@
+@import 'variables';
+@import 'mixins';
+
+dialog {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+dialog::backdrop {
+    @include backdrop-blur(8px);
+    transition-duration: 0.2s;
+}
+
+.js-timer-stop-timer-modal {
+    @include responsive(width, 45%, 40%, 50%, 60%, 60%);
+    @include responsive(height, 40%, 45%, 55%, 50%, 35%);
+
+    border: var(--primary-color) solid 1px;
+    border-radius: 80px;
+
+
+    z-index: 1000;
+    position: fixed;
+
+    transition-duration: 0.2s;
+}
+
+.js-timer-stop-timer-content {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.js-timer-close-modal-button {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+
+    height: 32px;
+    width: 32px;
+
+    font-size: 16px;
+
+    position: absolute;
+    @include responsive(top, 30px, 25px, 18px, 18px, 18px);
+    @include responsive(right, 30px, 25px, 30px, 35px, 40px);
+
+
+    transition-duration: 0.2s;
+}
+
+.js-timer-close-modal-button:hover {
+    background-color: var(--bg-color);
+    transform: scale(120%);
+    transition-duration: 0.2s;
+}
+
+.js-timer-close-modal-button:active {
+    transform: scale(100%);
+    transition-duration: 0.2s;
+}
+
+.js-timer-modal-header {
+    font-size: 28px;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+.js-timer-modal-text {
+    @include responsive(font-size, 18px, 16px, 16px, 14px, 13px);
+    @include mobile-only(display, none, block);
+
+    font-weight: 200;
+}
+
+.js-timer-modal-text-mobile {
+    @include mobile-only(display, block, none);
+
+    font-size: 16px;
+
+    font-weight: 300;
+}
+
+.js-timer-modal-stop-timer-button {
+    @include mobile-only(width, 130px, 200px);
+    @include mobile-only(height, 70px, 60px);
+    @include mobile-only(font-size, 16px, 20px);
+}
+

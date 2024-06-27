@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'mixins';
+
+
+.js-timer-number {
+    @include responsive(width, 12.5rem, 7.5rem, 5.6rem, 3rem, 3.8rem);
+
+    position: relative;
+    transition-duration: 0.2s;
+}
+
+
+
+.js-timer-on {
+    fill: var(--primary-color);
+    transition-duration: 0.1s;
+}
+
+.js-timer-off {
+    fill: var(--number-bg-color);
+    transition-duration: 0.1s;
+}
