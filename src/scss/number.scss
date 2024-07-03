@@ -1,6 +1,9 @@
 @import 'variables';
 @import 'mixins';
 
+#js-timer-seconds, #js-timer-seperator-seconds {
+    @include mobile-only(display, none, flex)
+}
 
 .js-timer-number {
     @include responsive(width, 12.5rem, 7.5rem, 5.6rem, 3rem, 3.8rem);

@@ -41,7 +41,7 @@ export class Kernel {
             numberContainers.minutes.composer.setTo(currentTime.minutes);
             numberContainers.seconds.composer.setTo(currentTime.seconds);
 
-        }, 1000);
+        }, 250);
 
         console.log(numberContainers)
 
