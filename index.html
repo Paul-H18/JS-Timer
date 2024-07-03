@@ -10,18 +10,36 @@
 <body>
 
     <div id="app-1">
+        <div class="js-number-container">
 
-        <js-timer-number>
-        </js-timer-number>
+            <div id="js-timer-hours" class="js-timer-number-of-two">
+                <js-timer-number>
+                </js-timer-number>
 
-        <js-timer-number>
-        </js-timer-number>
+                <js-timer-number>
+                </js-timer-number>
+            </div>
 
-        <js-timer-number>
-        </js-timer-number>
+            <js-timer-seperator></js-timer-seperator>
 
-        <js-timer-number>
-        </js-timer-number>
+            <div id="js-timer-minutes" class="js-timer-number-of-two">
+                <js-timer-number>
+                </js-timer-number>
+
+                <js-timer-number>
+                </js-timer-number>
+            </div>
+
+            <js-timer-seperator></js-timer-seperator>
+
+            <div id="js-timer-seconds" class="js-timer-number-of-two">
+                <js-timer-number>
+                </js-timer-number>
+
+                <js-timer-number>
+                </js-timer-number>
+            </div>
+        </div>
 
     </div>
 
@@ -39,6 +57,13 @@
             <polygon class="js-timer-on" id="centerBottom" points="96.44 356.46 191.4 356.46 158.26 326.75 96.44 326.75 34.62 326.75 1.49 356.46 96.44 356.46"/>
             <polygon class="js-timer-on" id="rightBottom" points="192.88 349.42 192.88 181.76 163.05 200.32 163.05 321.67 192.88 349.42"/>
         </svg>
+    </template>
+
+    <template id="tmp-seperator">
+        <div class="js-timer-seperator">
+            <div class="js-timer-dot"></div>
+            <div class="js-timer-dot"></div>
+        </div>
     </template>
 
     <script src="src/js/index.js" type="module"></script>

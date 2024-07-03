@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixins';
+
+.js-number-container {
+  margin-top: 170px;
+
+  display: flex;
+  gap: 55px;
+}
+
+.js-timer-number-of-two {
+  display: flex;
+  gap: 25px;
+}

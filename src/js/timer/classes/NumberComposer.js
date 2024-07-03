@@ -13,8 +13,16 @@ export class NumberComposer {
         this.numberCount = numberElements.length;
 
         this.value = 0;
+
+        this.setTo(this.value);
     }
 
+    /**
+     * Sets composition to given value
+     * can be smaller than count of numbers but not bigger!
+     * e.g. -> 2003 to 2003 or 0002003
+     * @param value
+     */
     setTo(value) {
         if(value) {
             const valueLength = value.toString().length;
@@ -31,6 +39,8 @@ export class NumberComposer {
                 reversedArrayOfElements.forEach((element, index) => {
                     element.setTo(parseInt(valueArray[index] ?? 0, 10));
                 });
+            } else {
+                console.error('Error in setting value to seven segment numbers. maybe the given value is too big!');
             }
         } else {
             this.numberElements.forEach((element) => {

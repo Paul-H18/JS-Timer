@@ -9,14 +9,17 @@ export class Number extends HTMLElement {
         this.appendChild(this.template.cloneNode(true));
     }
 
-    test() {
-        console.log(this.querySelector('#centerTop'));
-    }
-
+    /**
+     *
+     * @returns {NodeList} all polygons of a number
+     */
     getAllElements() {
         return this.querySelectorAll('polygon');
     }
 
+    /**
+     * Deactivates all segments
+     */
     disableAll() {
         this.getAllElements().forEach((polygon) => {
             polygon.classList.remove('js-timer-on');
@@ -24,6 +27,9 @@ export class Number extends HTMLElement {
         });
     }
 
+    /**
+     * Activates all segments
+     */
     activateAll() {
         this.getAllElements().forEach((polygon) => {
             polygon.classList.remove('js-timer-off');
@@ -31,6 +37,10 @@ export class Number extends HTMLElement {
         });
     }
 
+    /**
+     * Activates single segment
+     * @param segment segment that is to be activated
+     */
     activateSingle(segment) {
         const partElement = this.querySelector(('#' + segment));
         partElement.classList.remove('js-timer-off')
