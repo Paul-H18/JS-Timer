@@ -5,6 +5,14 @@
 @import 'number';
 @import 'seperator';
 
+:root {
+  --bg-color: #ffffff;
+  --primary-color: #171717;
+  --hover-color: #3a3a3a;
+
+  --number-bg-color: #E6E6E6;
+}
+
 body {
   background-color: white;
 }
