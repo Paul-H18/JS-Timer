@@ -6,8 +6,24 @@ export class Timer extends HTMLElement {
     composers;
     numberElements;
 
+    sliderElements;
+    resetSliderButtonElements;
+
+    time;
+    defaultTime;
+
     constructor() {
         super();
+
+        this.defaultTime = {
+            'minuteSlider': 15,
+            'secondsSlider': 0,
+        }
+
+        this.time = {
+            'minutes': this.defaultTime.minuteSlider,
+            'seconds': this.defaultTime.secondsSlider,
+        }
 
         this.template = document.querySelector('#tmp-timer').content;
         this.appendChild(this.template.cloneNode(true));
@@ -18,9 +34,10 @@ export class Timer extends HTMLElement {
         }
 
 
+
         this.composers = {
-            'minutes': new NumberComposer(this.numberElements.minuteNumbers, 15),
-            'seconds': new NumberComposer(this.numberElements.secondsNumbers),
+            'minutes': new NumberComposer(this.numberElements.minuteNumbers, this.time.minutes),
+            'seconds': new NumberComposer(this.numberElements.secondsNumbers, this.time.seconds),
         }
 
         this.buttonElements = {
@@ -33,6 +50,31 @@ export class Timer extends HTMLElement {
                 this.toggleTimer();
             });
         });
+
+
+        this.sliderElements = {
+            'minuteSlider': this.querySelector('#js-timer-timer-minutes'),
+            'secondsSlider': this.querySelector('#js-timer-timer-seconds'),
+        }
+
+        Object.keys(this.sliderElements).forEach((key) => {
+            this.sliderElements[key].addEventListener('input', () => {
+                this.setTime();
+            });
+        });
+
+        this.resetSliderButtonElements = {
+            'minuteSlider': this.querySelector('#js-timer-timer-slider-minute-reset-button'),
+            'secondsSlider': this.querySelector('#js-timer-timer-slider-second-reset-button'),
+        };
+
+        Object.keys(this.resetSliderButtonElements).forEach((key) => {
+            this.resetSliderButtonElements[key].addEventListener('click', () => {
+                this.sliderElements[key].value = this.defaultTime[key];
+                this.setTime();
+            });
+        });
+
     }
 
     toggleOnOffButton() {
@@ -42,6 +84,18 @@ export class Timer extends HTMLElement {
 
     toggleTimer() {
         this.toggleOnOffButton();
+    }
+
+    setTime() {
+        this.time.minutes = this.sliderElements.minuteSlider.value;
+        this.time.seconds = this.sliderElements.secondsSlider.value;
+
+        this.refreshDigitalClock();
+    }
+
+    refreshDigitalClock() {
+        this.composers.minutes.setTo(this.time.minutes);
+        this.composers.seconds.setTo(this.time.seconds);
     }
 
 }

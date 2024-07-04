@@ -72,29 +72,42 @@
 
     <template id="tmp-timer">
         <div class="js-timer-timer-full">
-            <div id="js-timer-timer-text">
-                <div id="js-timer-timer-remaining-minutes" class="js-timer-timer-remaining-time">
-                    <js-timer-number class="js-timer-timer-remaining-time-number">
-                    </js-timer-number>
+            <div class="js-timer-timer-slider">
+                <button id="js-timer-timer-slider-minute-reset-button" class="js-timer-reset-button"><img src="assets/resetIcon.png" alt="reset"></button>
+                <input type="range" min="0" max="59" value="15" class="slider" id="js-timer-timer-minutes" orient="vertical">
+                <label for="js-timer-timer-minutes">Minutes</label>
+            </div>
+            <div class="js-timer-timer-colum">
+                <div id="js-timer-timer-text">
+                    <div id="js-timer-timer-remaining-minutes" class="js-timer-timer-remaining-time">
+                        <js-timer-number class="js-timer-timer-remaining-time-number">
+                        </js-timer-number>
 
-                    <js-timer-number class="js-timer-timer-remaining-time-number">
-                    </js-timer-number>
+                        <js-timer-number class="js-timer-timer-remaining-time-number">
+                        </js-timer-number>
+                    </div>
+
+                    <span class="js-timer-timer-colon">:</span>
+
+                    <div id="js-timer-timer-remaining-seconds" class="js-timer-timer-remaining-time">
+                        <js-timer-number class="js-timer-timer-remaining-time-number">
+                        </js-timer-number>
+
+                        <js-timer-number class="js-timer-timer-remaining-time-number">
+                        </js-timer-number>
+                    </div>
                 </div>
 
-                <span class="js-timer-timer-colon">:</span>
-
-                <div id="js-timer-timer-remaining-seconds" class="js-timer-timer-remaining-time">
-                    <js-timer-number class="js-timer-timer-remaining-time-number">
-                    </js-timer-number>
-
-                    <js-timer-number class="js-timer-timer-remaining-time-number">
-                    </js-timer-number>
+                <div id="js-timer-timer-controls">
+                    <button id="js-timer-start-button" class="js-timer-timer-start-btn">Timer starten</button>
+                    <button id="js-timer-stop-button" class="js-timer-timer-stop-btn js-timer-timer-hidden">Timer stoppen</button>
                 </div>
             </div>
 
-            <div id="js-timer-timer-controls">
-                <button id="js-timer-start-button" class="js-timer-timer-start-btn">Timer starten</button>
-                <button id="js-timer-stop-button" class="js-timer-timer-stop-btn js-timer-timer-hidden">Timer stoppen</button>
+            <div class="js-timer-timer-slider">
+                <button id="js-timer-timer-slider-second-reset-button" class="js-timer-reset-button"><img src="assets/resetIcon.png" alt="reset"></button>
+                <input type="range" min="0" max="59" value="0" class="slider" id="js-timer-timer-seconds" orient="vertical">
+                <label for="js-timer-timer-seconds">Seconds</label>
             </div>
         </div>
     </template>
