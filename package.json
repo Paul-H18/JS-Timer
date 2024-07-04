@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "watch": "node-sass -w src/scss/style.scss build/style.css",
-    "build": "node-sass src/scss/style.scss build/style.css"
+    "watch": "node-sass -w src/scss/js-timer.scss build/js-timer.css",
+    "build": "node-sass src/scss/js-timer.scss build/js-timer.css"
   },
 
   "name": "jstimer",

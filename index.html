@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <link rel="icon" type="image/png" href="assets/icon.png">
-    <link rel="stylesheet" href="build/style.css">
+    <link rel="stylesheet" href="build/js-timer.css">
 </head>
 <body>
 
@@ -13,37 +13,37 @@
         <div class="js-number-container">
 
             <div id="js-timer-hours" class="js-timer-number-of-two">
-                <js-timer-number>
+                <js-timer-number class="js-timer-number">
                 </js-timer-number>
 
-                <js-timer-number>
+                <js-timer-number class="js-timer-number">
                 </js-timer-number>
             </div>
 
             <js-timer-seperator></js-timer-seperator>
 
             <div id="js-timer-minutes" class="js-timer-number-of-two">
-                <js-timer-number>
+                <js-timer-number class="js-timer-number">
                 </js-timer-number>
 
-                <js-timer-number>
+                <js-timer-number class="js-timer-number">
                 </js-timer-number>
             </div>
 
             <js-timer-seperator id="js-timer-seperator-seconds"></js-timer-seperator>
 
             <div id="js-timer-seconds" class="js-timer-number-of-two">
-                <js-timer-number>
+                <js-timer-number class="js-timer-number">
                 </js-timer-number>
 
-                <js-timer-number>
+                <js-timer-number class="js-timer-number">
                 </js-timer-number>
             </div>
         </div>
 
-        <div class="timer">
-            Test
-        </div>
+        <js-timer-timer>
+
+        </js-timer-timer>
 
     </div>
 
@@ -52,7 +52,7 @@
     </div>
 
     <template id="tmp-number">
-        <svg class="js-timer-number" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.88 356.46">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.88 356.46">
             <polygon class="js-timer-on" id="leftTop" points="0 7.04 0 174.7 29.84 156.14 29.84 34.79 0 7.04"/>
             <polygon class="js-timer-on" id="centerMid" points="96.44 193.49 163.05 193.49 187.67 178.23 163.05 162.96 96.44 162.96 29.84 162.96 5.21 178.23 29.84 193.49 96.44 193.49"/>
             <polygon class="js-timer-on" id="centerTop" points="96.44 0 191.4 0 158.26 29.7 96.44 29.7 34.62 29.7 1.49 0 96.44 0"/>
@@ -67,6 +67,35 @@
         <div class="js-timer-seperator">
             <div class="js-timer-dot"></div>
             <div class="js-timer-dot"></div>
+        </div>
+    </template>
+
+    <template id="tmp-timer">
+        <div class="js-timer-timer-full">
+            <div id="js-timer-timer-text">
+                <div id="js-timer-timer-remaining-minutes" class="js-timer-timer-remaining-time">
+                    <js-timer-number class="js-timer-timer-remaining-time-number">
+                    </js-timer-number>
+
+                    <js-timer-number class="js-timer-timer-remaining-time-number">
+                    </js-timer-number>
+                </div>
+
+                <span class="js-timer-timer-colon">:</span>
+
+                <div id="js-timer-timer-remaining-seconds" class="js-timer-timer-remaining-time">
+                    <js-timer-number class="js-timer-timer-remaining-time-number">
+                    </js-timer-number>
+
+                    <js-timer-number class="js-timer-timer-remaining-time-number">
+                    </js-timer-number>
+                </div>
+            </div>
+
+            <div id="js-timer-timer-controls">
+                <button id="js-timer-start-button" class="js-timer-timer-start-btn">Timer starten</button>
+                <button id="js-timer-stop-button" class="js-timer-timer-stop-btn js-timer-timer-hidden">Timer stoppen</button>
+            </div>
         </div>
     </template>
 

@@ -1,0 +1,76 @@
+@import 'variables';
+@import 'mixins';
+
+#js-timer-timer-text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.js-timer-timer-start-btn {
+  width: 350px;
+  height: 50px;
+
+
+  background-color: #121212;
+  color: #ffffff;
+  border-color: #121212;
+  font-size: 24px;
+}
+
+
+.js-timer-timer-stop-btn {
+  width: 350px;
+  height: 50px;
+
+
+  background-color: #ffffff;
+  color: #121212;
+  border-color: #121212;
+  font-size: 24px;
+}
+
+.js-timer-timer-remaining-time-number {
+  @include responsive(width, 1.2rem, 1rem, 0.9rem, 0.8rem, 0.8rem);
+
+  position: relative;
+  transition-duration: 0.2s;
+}
+
+.js-timer-timer-full {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.js-timer-timer-remaining-time {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 5px;
+
+  justify-content: center;
+}
+
+
+.js-timer-timer-colon {
+  @include responsive(font-size, 1.5rem, 1.3rem, 1.1rem, 1rem, 0.8rem);
+
+  padding: 0;
+  margin-left: 1px;
+  margin-right: 6px;
+}
+
+.js-timer-timer-hidden {
+  display: none;
+}
+
+.js-timer-timer-shown {
+  display: block;
+}

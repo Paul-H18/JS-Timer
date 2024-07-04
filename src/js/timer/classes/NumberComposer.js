@@ -7,12 +7,13 @@ export class NumberComposer {
     /**
      *
      * @param numberElements {Array} The Number Elements in correct order from left to right
+     * @param value {number} Pre Value
      */
-    constructor(numberElements) {
+    constructor(numberElements, value= 0) {
         this.numberElements = numberElements;
         this.numberCount = numberElements.length;
 
-        this.value = 0;
+        this.value = value;
 
         this.setTo(this.value);
     }
