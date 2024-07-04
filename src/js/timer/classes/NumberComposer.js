@@ -6,8 +6,8 @@ export class NumberComposer {
 
     /**
      *
-     * @param numberElements {Array} The Number Elements in correct order from left to right
-     * @param value {number} Pre Value
+     * @param numberElements { Array } The Number Elements in correct order from left to right
+     * @param value { number } Pre Value
      */
     constructor(numberElements, value= 0) {
         this.numberElements = numberElements;
@@ -22,7 +22,7 @@ export class NumberComposer {
      * Sets composition to given value
      * can be smaller than count of numbers but not bigger!
      * e.g. -> 2003 to 2003 or 0002003
-     * @param value
+     * @param value { number }
      */
     setTo(value) {
         if(value) {

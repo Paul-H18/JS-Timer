@@ -5,6 +5,9 @@ export class Clock {
         this.updateTime();
     }
 
+    /**
+     * updates the current time with JS's Date()
+     */
     updateTime() {
         this.dateTime = new Date();
         this.time = {
@@ -14,6 +17,10 @@ export class Clock {
         }
     }
 
+    /**
+     *
+     * @returns { object } holds the current time
+     */
     getCurrentTime() {
         this.updateTime();
         return this.time;

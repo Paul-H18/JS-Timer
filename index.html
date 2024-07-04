@@ -71,6 +71,22 @@
     </template>
 
     <template id="tmp-timer">
+        <dialog id="js-timer-timer-dialog">
+            <div class="js-timer-stop-timer-content">
+                <h2>Möchten Sie den Timer wirklich beenden?</h2>
+                <p class="js-timer-modal-text">
+                    Sollten Sie den Timer vorzeitig beenden wollen, klicken Sie einfach auf die entsprechende Schaltfläche.
+                    <br>
+                    Bitte beachten Sie jedoch, dass der Timer kein akustisches Signal abgeben wird.
+                </p>
+
+                <p class="js-timer-modal-text-mobile">
+                    Möchten Sie den Timer wirklich beenden?
+                </p>
+                <button id="js-timer-stop-button" class="js-timer-timer-stop-btn">Timer stoppen</button>
+            </div>
+        </dialog>
+
         <div class="js-timer-timer-full">
             <div class="js-timer-timer-slider">
                 <button id="js-timer-timer-slider-minute-reset-button" class="js-timer-reset-button"><img src="assets/resetIcon.png" alt="reset"></button>
@@ -100,7 +116,7 @@
 
                 <div id="js-timer-timer-controls">
                     <button id="js-timer-start-button" class="js-timer-timer-start-btn">Timer starten</button>
-                    <button id="js-timer-stop-button" class="js-timer-timer-stop-btn js-timer-timer-hidden">Timer stoppen</button>
+                    <button id="js-timer-dialog-button" class="js-timer-timer-stop-btn js-timer-timer-hidden">Timer stoppen</button>
                 </div>
             </div>
 
