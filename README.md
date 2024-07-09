@@ -9,7 +9,7 @@ It's my goal to build a npm-package that creates a Seven Segment Clock with a Ti
 * Install ddev and docker
 * Create a `build` folder in root directory
 * Run `ddev npm i`
-* Run `ddev npm run build`
+* Run `ddev npm run build` or sometime just `npm run build`
 
 
 ### Disclaimer
