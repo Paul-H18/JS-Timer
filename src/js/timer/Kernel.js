@@ -3,6 +3,7 @@ import {NumberComposer} from "./classes/NumberComposer.js";
 import {Seperator} from "./classes/Seperator.js";
 import {Clock} from "./classes/Clock.js";
 import {Timer} from "./classes/Timer.js";
+import {SeperatorSmall} from "./classes/SeperatorSmall.js";
 export class Kernel {
     appName;
     appId;
@@ -29,6 +30,7 @@ export class Kernel {
     registerClasses() {
         customElements.define("js-timer-number", Number);
         customElements.define("js-timer-seperator", Seperator);
+        customElements.define("js-timer-seperator-sm", SeperatorSmall);
 
         customElements.define("js-timer-timer", Timer);
     }

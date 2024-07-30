@@ -26,3 +26,31 @@
     transition-duration: 0.2s;
 
 }
+
+
+.js-timer-seperator-sm {
+    @include responsive(gap, 12px, 11px, 10px, 8px, 6px);
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    transition-duration: 0.2s;
+}
+
+.js-timer-dot-sm {
+    @include responsive(height, 7px, 5px, 4px, 3px, 2px);
+    @include responsive(width, 7px, 5px, 4px, 3px, 2px);
+
+    padding: 0;
+
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+
+    transition-duration: 0.2s;
+
+    margin-left: 12px;
+    margin-right: 12px;
+}
